@@ -1,6 +1,6 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
-import * as service from '../';
+const service = require('../firebase-config.json');
 
 admin.initializeApp({
     credential: admin.credential.cert(service),
