@@ -1,6 +1,6 @@
 import express from 'express';
 
-declare const app = express();
+let app = express();
 declare const port = 3333;
 
 app.get(/api/, (req, res) => {
