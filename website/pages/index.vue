@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <div class="hero-container">
       <div class="hero-text-container">
         <h1 class="display-3 font-weight-black text-left home-hero-heading">
@@ -14,7 +14,9 @@
         <v-btn color="primary" dark large>Get Started</v-btn>
       </div>
     </div>
-  </v-app>
+
+    <div class="home-section-2"></div>
+  </div>
 </template>
 
 <script>
@@ -23,11 +25,4 @@ export default {};
 
 
 <style >
-body {
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(193, 98, 253, 1) 11.2%,
-    rgba(0, 49, 165, 1) 91.1%
-  );
-}
 </style>
