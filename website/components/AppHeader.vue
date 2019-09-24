@@ -16,7 +16,7 @@
       </v-toolbar-items>
     </template>
 
-    <img src="~assets/reply-ninja-logo.svg" alt="reply ninja logo" />
+    <img class="header-logo" src="~assets/reply-ninja-logo.svg" alt="reply ninja logo" />
 
     <div class="flex-grow-1"></div>
 
