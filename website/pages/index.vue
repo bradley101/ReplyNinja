@@ -11,7 +11,7 @@
           Its super fast, super effective and super efficient.
           Just like Ninja.
         </p>
-        <v-btn color="primary" dark large>Large Button</v-btn>
+        <v-btn color="primary" dark large>Get Started</v-btn>
       </div>
     </div>
   </v-app>

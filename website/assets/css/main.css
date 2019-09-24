@@ -68,7 +68,10 @@ body {
     height: 38px;
     margin: 0px 0px 0px 20px;
 }
-
+.theme--dark.v-application {
+ background: transparent !important; 
+    color: #FFFFFF;
+}
 .hero-container{
     height: 100vh;
 
