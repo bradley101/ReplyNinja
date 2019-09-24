@@ -16,7 +16,7 @@
       </v-toolbar-items>
     </template>
 
-    <v-toolbar-title>Ninja Reply</v-toolbar-title>
+    <img src="~assets/reply-ninja-logo.svg" alt="reply ninja logo" />
 
     <div class="flex-grow-1"></div>
 
