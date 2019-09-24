@@ -4,3 +4,4 @@ node_modules
 */dist
 dist
 triggers/functions/firebase-config.json
+triggers/functions/lib
