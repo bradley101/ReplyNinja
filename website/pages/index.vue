@@ -1,6 +1,19 @@
 <template>
   <v-app>
-    <p class="display-4 font-weight-black text-center">Test Text</p>
+    <div class="hero-container">
+      <div class="hero-text-container">
+        <h1 class="display-3 font-weight-black text-left home-hero-heading">
+          Comment System for
+          your website
+        </h1>
+        <p class="font-weight-light title text-left home-hero-tagline">
+          Empower your visitor to have real converaation with you.
+          Its super fast, super effective and super efficient.
+          Just like Ninja.
+        </p>
+        <v-btn color="primary" dark large>Large Button</v-btn>
+      </div>
+    </div>
   </v-app>
 </template>
 

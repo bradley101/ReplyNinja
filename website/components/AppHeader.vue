@@ -5,14 +5,14 @@
     :dense="dense"
     :collapse="collapse"
     :flat="flat"
+    color="rgba(66, 29, 122, .5)"
     :src="bg ? 'https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg' : undefined"
     :extension-height="extensionHeight"
   >
     <template v-if="extendedSlot" #extension>
       <v-toolbar-items>
-        <v-btn text>Link 1</v-btn>
-        <v-btn text>Link 2</v-btn>
-        <v-btn text>Link 3</v-btn>
+        <v-btn text>Dev</v-btn>
+        <v-btn text>Sign Up</v-btn>
       </v-toolbar-items>
     </template>
 
@@ -21,9 +21,9 @@
     <div class="flex-grow-1"></div>
 
     <v-toolbar-items>
-      <v-btn text>Link 1</v-btn>
-      <v-btn text>Link 2</v-btn>
-      <v-btn text>Link 3</v-btn>
+      <v-btn text>Developer</v-btn>
+      <v-btn text>Sign Up</v-btn>
+      <v-btn text>Sign In</v-btn>
     </v-toolbar-items>
 
     <template v-if="$vuetify.breakpoint.smAndUp">
@@ -50,7 +50,7 @@ export default {
     collapse: false,
     flat: false,
     bg: false,
-    extensionHeight: 48
+    extensionHeight: 60
   })
 };
 </script>
