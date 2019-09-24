@@ -8,9 +8,9 @@
           your website
         </h1>
         <p class="font-weight-light title text-left home-hero-tagline">
-          Empower your visitor to have real converaation with you.
+          Empower your visitor to have real conversation with you.
           Its super fast, super effective and super efficient.
-          Just like you and your that Ninja friend.
+          Just like you and that Ninja friend of yours.
           No money Involved. It's free and Open Source.
         </p>
         <v-btn color="primary" dark large>Get Started</v-btn>
