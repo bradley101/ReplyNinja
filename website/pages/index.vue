@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="hero-container">
+      <img class="hero-comment-svg" src="~assets/hero-comment-look.svg" />
       <div class="hero-text-container">
         <h1 class="display-3 font-weight-black text-left home-hero-heading">
           Comment System for
@@ -9,7 +10,8 @@
         <p class="font-weight-light title text-left home-hero-tagline">
           Empower your visitor to have real converaation with you.
           Its super fast, super effective and super efficient.
-          Just like Ninja.
+          Just like you and your that Ninja friend.
+          No money Involved. It's free and Open Source.
         </p>
         <v-btn color="primary" dark large>Get Started</v-btn>
       </div>

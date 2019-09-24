@@ -102,6 +102,13 @@ body {
     }
 }
 
+.hero-comment-svg{
+    position: absolute;
+    height: 54vh;
+    top: 270px;
+    left: -90px;
+}
+
 
 /* home-section-2 */
 
