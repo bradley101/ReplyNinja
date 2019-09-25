@@ -1,7 +1,7 @@
 {
-  "name": "reply-ninja-website",
+  "name": "reply-ninja",
   "version": "1.0.0",
-  "description": " best kickass comment system for your static website",
+  "description": "comment system for static website",
   "author": "Saurabh Chandra Rai",
   "private": true,
   "scripts": {
@@ -11,12 +11,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "nuxt": "^2.0.0",
     "cross-env": "^5.2.0",
-    "express": "^4.16.4",
-    "nuxt": "^2.0.0"
+    "express": "^4.16.4"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.8.5",
     "nodemon": "^1.18.9"
   }
 }

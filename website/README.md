@@ -1,6 +1,6 @@
-# reply-ninja-website
+# reply-ninja
 
->  best kickass comment system for your static website
+> comment system for static website
 
 ## Build Setup
 
