@@ -1,72 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        reply-ninja
-      </h1>
-      <h2 class="subtitle">
-        comment system for static website
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <div class="hero-container">
+      <img class="hero-comment-svg" src="~assets/hero-comment-look.svg" />
+      <img class="hero-rec-left hero-rec" src="~assets/rec-left.svg" />
+      <img class="hero-rec-right hero-rec" src="~assets/rec-right.svg" />
+      <div class="hero-text-container">
+        <h1 class="display-3 font-weight-black text-left home-hero-heading">
+          Comment System for
+          your website
+        </h1>
+        <p class="font-weight-light title text-left home-hero-tagline">
+          Empower your visitor to have real conversation with you.
+          Its super fast, super effective and super efficient.
+          Just like you and that Ninja friend of yours.
+          No money Involved. It's free and Open Source.
+        </p>
+        <v-btn color="primary" dark large>Get Started</v-btn>
       </div>
     </div>
+
+    <div class="home-section-2"></div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
+export default {};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+<style >
 </style>
