@@ -2,6 +2,8 @@
   <div>
     <div class="hero-container">
       <img class="hero-comment-svg" src="~assets/hero-comment-look.svg" />
+      <img class="hero-rec-left hero-rec" src="~assets/rec-left.svg" />
+      <img class="hero-rec-right hero-rec" src="~assets/rec-right.svg" />
       <div class="hero-text-container">
         <h1 class="display-3 font-weight-black text-left home-hero-heading">
           Comment System for

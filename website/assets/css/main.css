@@ -109,6 +109,23 @@ body {
     left: -90px;
 }
 
+.hero-rec{
+  position: absolute;
+  z-index: -1;
+ 
+}
+
+.hero-rec-left{
+  width: 100%;
+
+    left: -15%;
+    top: -26%;
+}
+.hero-rec-right{
+  width: 100%;
+  right: -30%;
+  top: -30%;
+}
 
 /* home-section-2 */
 
