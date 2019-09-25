@@ -16,7 +16,9 @@
       </v-toolbar-items>
     </template>
 
-    <img class="header-logo" src="~assets/reply-ninja-logo.svg" alt="reply ninja logo" />
+    <nuxt-link to="/">
+      <img class="header-logo" src="~assets/reply-ninja-logo.svg" alt="reply ninja logo" />
+    </nuxt-link>
 
     <div class="flex-grow-1"></div>
 

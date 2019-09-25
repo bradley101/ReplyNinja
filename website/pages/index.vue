@@ -15,7 +15,8 @@
           Just like you and that Ninja friend of yours.
           No money Involved. It's free and Open Source.
         </p>
-        <v-btn color="primary" dark large>Get Started</v-btn>
+
+        <v-btn color="primary" dark large to="/signin">Get Started</v-btn>
       </div>
     </div>
 
