@@ -17,6 +17,7 @@
         </p>
 
         <v-btn color="primary" dark large to="/signin">Get Started</v-btn>
+        <nuxt-link  ></nuxt-link>
       </div>
     </div>
 
