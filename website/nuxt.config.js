@@ -14,7 +14,22 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+
+    script: [
+      {
+        src: '/firebase.global.js',
+        defer: true,
+        body: true,
+        async: true
+      },
+      {
+        src: '/main.js',
+        defer: true,
+        body: true,
+        async: true
+      }
+    ],
   },
   /*
   ** Customize the progress-bar color
@@ -26,20 +41,7 @@ module.exports = {
   css: [
     '@assets/css/main.css'
   ],
-  script: [
-    {
-      src: '/js/firebase.global.js',
-      defer: true,
-      body: true,
-      async: true
-    },
-    {
-      src: '/js/main.js',
-      defer: true,
-      body: true,
-      async: true
-    }
-  ],
+
   /*
   ** Plugins to load before mounting the App
   */
