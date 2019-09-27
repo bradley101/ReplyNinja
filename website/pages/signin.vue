@@ -13,11 +13,11 @@
       </p>
 
       <div class="social-login">
-        <button class="btn google-login">
+        <button class="btn google-login" id="google-login">
           <img src="~assets/google-icon.svg" alt />
           Login with Google
         </button>
-        <button class="btn github-login">
+        <button class="btn github-login" id="fb-login">
           <img src="~assets/github-icon.svg" alt />
           Login with Github
         </button>

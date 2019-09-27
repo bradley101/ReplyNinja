@@ -18,13 +18,13 @@ module.exports = {
 
     script: [
       {
-        src: '/firebase.global.js',
+        src: '/js/firebase.client.js',
         defer: true,
         body: true,
         async: true
       },
       {
-        src: '/main.js',
+        src: '/js/main.js',
         defer: true,
         body: true,
         async: true
@@ -46,7 +46,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-
+    '~/plugins/firebase.global.js'
   ],
   /*
   ** Nuxt.js dev-modules
