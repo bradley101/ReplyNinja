@@ -23,9 +23,11 @@
         </button>
       </div>
 
+      <p class="font-weight-light title text-left home-hero-tagline">or login with:</p>
+
       <v-card-text>
         <v-form>
-          <v-text-field label="Username" prepend-icon="mdi-account-circle" />
+          <v-text-field label="Email or username" prepend-icon="mdi-account-circle" />
           <v-text-field
             :type="showPassword ? 'text' : 'password'"
             label="Password"
@@ -35,13 +37,13 @@
           />
         </v-form>
       </v-card-text>
-      <v-divider></v-divider>
 
-      <div class="remember-me">
-        <v-container fluid>
+      <v-card-actions>
+        <div class="remember-me">
           <v-checkbox v-model="checkbox1" label="Remember me"></v-checkbox>
-        </v-container>
-      </div>
+          <p class="text-right">forgot password</p>
+        </div>
+      </v-card-actions>
 
       <v-card-actions>
         <v-btn class="login-button">Login</v-btn>
