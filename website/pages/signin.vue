@@ -13,8 +13,14 @@
       </p>
 
       <div class="social-login">
-        <span class="google-login"></span>
-        <span class="github-login"></span>
+        <button class="btn google-login">
+          <img src="~assets/google-icon.svg" alt />
+          Login with Google
+        </button>
+        <button class="btn github-login">
+          <img src="~assets/github-icon.svg" alt />
+          Login with Github
+        </button>
       </div>
 
       <v-card-text>
@@ -30,9 +36,16 @@
         </v-form>
       </v-card-text>
       <v-divider></v-divider>
+
+      <div class="remember-me">
+        <v-container fluid>
+          <v-checkbox v-model="checkbox1" label="Remember me"></v-checkbox>
+        </v-container>
+      </div>
+
       <v-card-actions>
-        <v-btn color="success">Register</v-btn>
-        <v-btn color="info">Login</v-btn>
+        <v-btn class="login-button">Login</v-btn>
+        <v-btn class="sign-up-button">Sign Up</v-btn>
       </v-card-actions>
     </div>
   </div>
@@ -41,7 +54,8 @@
 export default {
   data() {
     return {
-      showPassword: false
+      showPassword: false,
+      checkbox1: false
     };
   }
 };

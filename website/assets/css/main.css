@@ -175,22 +175,60 @@ body {
   height: 100vh;
   position: relative;
   padding: 30px 6% 30px  6%;
+  background-color: #290040;
 }
 
 .login-right .login-rn-logo{
   width: 170px;
+ ;
 }
 
-
+.social-login{
+  padding: 5px 0px 0px 0px;
+  position: relative;
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+}
 .social-login .google-login{
-  width: 249px;
+  width: 45%;
   height: 48px;
   border-radius: 11px;
   background: #ea4335;
-  position: absolute;
+  
 
 }
 
+.social-login .github-login{
+  width:45%;
+  height: 48px;
+  border-radius: 11px;
+  background: #333;
+  margin-left: 6%;
+
+}
+
+.social-login>button>img{
+  position: relative;
+top: 7px;
+right: 9px;
+margin: -9px 2px 0px 0px;
+}
+
+.login-button{
+  width: 275px;
+height: 61px;
+border-radius: 11px;
+background: linear-gradient(#bc35de 0%, #341b6f 100%);
+}
+
+.sign-up-button{
+  width: 210px;
+  height: 61px;
+  border-radius: 11px;
+  background-color: #fff;
+  
+}
 
 
 
