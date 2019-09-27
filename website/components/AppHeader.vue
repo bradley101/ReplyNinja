@@ -25,7 +25,7 @@
     <v-toolbar-items>
       <v-btn text>Developer</v-btn>
       <v-btn text>Sign Up</v-btn>
-      <v-btn text>Sign In</v-btn>
+      <v-btn text to='/signin'>Sign In</v-btn>
     </v-toolbar-items>
 
     <template v-if="$vuetify.breakpoint.smAndUp">
