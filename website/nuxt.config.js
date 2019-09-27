@@ -26,6 +26,9 @@ module.exports = {
   css: [
     '@assets/css/main.css'
   ],
+  script: [
+    { src: 'js/firebase.global.js' }
+  ],
   /*
   ** Plugins to load before mounting the App
   */
