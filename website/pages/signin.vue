@@ -13,7 +13,7 @@
       </p>
 
       <div class="social-login">
-        <button class="btn google-login" id="google-login">
+        <button class="btn google-login" id="google-login" @click.prevent="googleLogin">
           <img src="~assets/google-icon.svg" alt />
           Login with Google
         </button>
@@ -53,12 +53,24 @@
   </div>
 </template>
 <script>
+import firebase from 'firebase';
 export default {
   data() {
     return {
       showPassword: false,
       checkbox1: false
     };
+  },
+  mounted: function() {
+    console.log(firebase.SDK_VERSION);
+  },
+  methods: {
+    googleLogin: (event) => {
+      let googleProvider = new firebase.auth.GoogleAuthProvider();
+      googleProvider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+      firebase.auth().useDeviceLanguage();
+      console.log(googleProvider);
+    }
   }
 };
 </script>

@@ -23,12 +23,6 @@ module.exports = {
         body: true,
         async: true
       },
-      {
-        src: '/js/main.js',
-        defer: true,
-        body: true,
-        async: true
-      }
     ],
   },
   /*
