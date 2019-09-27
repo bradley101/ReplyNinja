@@ -4,6 +4,26 @@
     <div class="Triangle Triangle--one" />
     <div class="Triangle Triangle--three" />
     <div class="Triangle Triangle--four" />
+
+    <!-- <template v-slot:prepend>
+          <v-list>
+            <v-list-item>
+              <v-list-item-avatar>
+                <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
+              </v-list-item-avatar>
+            </v-list-item>
+
+            <v-list-item link two-line>
+              <v-list-item-content>
+                <v-list-item-title class="title">Sandra Adams</v-list-item-title>
+                <v-list-item-subtitle>sandra_a88@gmail.com</v-list-item-subtitle>
+              </v-list-item-content>
+              <v-list-item-action>
+                <v-icon>mdi-menu-down</v-icon>
+              </v-list-item-action>
+            </v-list-item>
+          </v-list>
+    </template>-->
   </div>
 </template>
 
