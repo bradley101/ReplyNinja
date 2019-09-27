@@ -27,7 +27,12 @@ module.exports = {
     '@assets/css/main.css'
   ],
   script: [
-    { src: '/js/firebase.global.js' },
+    {
+      src: '/js/firebase.global.js',
+      defer: true,
+      body: true,
+      async: true
+    },
     {
       src: '/js/main.js',
       defer: true,
