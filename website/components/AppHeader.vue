@@ -6,7 +6,6 @@
     :collapse="collapse"
     :flat="flat"
     color="rgba(66, 29, 122, .5)"
-    :src="bg ? 'https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg' : undefined"
     :extension-height="extensionHeight"
   >
     <template v-if="extendedSlot" #extension>
@@ -25,7 +24,7 @@
     <v-toolbar-items>
       <v-btn text>Developer</v-btn>
       <v-btn text>Sign Up</v-btn>
-      <v-btn text to='/signin'>Sign In</v-btn>
+      <v-btn text to="/signin">Sign In</v-btn>
     </v-toolbar-items>
 
     <template v-if="$vuetify.breakpoint.smAndUp">
@@ -51,7 +50,6 @@ export default {
     dense: false,
     collapse: false,
     flat: false,
-    bg: false,
     extensionHeight: 60
   })
 };
