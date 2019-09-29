@@ -27,13 +27,18 @@
 
       <v-card-text>
         <v-form>
-          <v-text-field label="Email or username" prepend-icon="mdi-account-circle" />
+          <v-text-field
+            label="Email or username"
+            prepend-icon="mdi-account-circle"
+            color="#E040FB"
+          />
           <v-text-field
             :type="showPassword ? 'text' : 'password'"
             label="Password"
             prepend-icon="mdi-lock"
             :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showPassword = !showPassword"
+            color="#E040FB"
           />
         </v-form>
       </v-card-text>
@@ -53,7 +58,7 @@
   </div>
 </template>
 <script>
-import firebase from 'firebase';
+import firebase from "firebase";
 export default {
   data() {
     return {
@@ -65,9 +70,11 @@ export default {
     console.log(firebase.SDK_VERSION);
   },
   methods: {
-    googleLogin: (event) => {
+    googleLogin: event => {
       let googleProvider = new firebase.auth.GoogleAuthProvider();
-      googleProvider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+      googleProvider.addScope(
+        "https://www.googleapis.com/auth/contacts.readonly"
+      );
       firebase.auth().useDeviceLanguage();
       console.log(googleProvider);
     }
