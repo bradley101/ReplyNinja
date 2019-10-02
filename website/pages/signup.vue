@@ -23,22 +23,17 @@
         </button>
       </div>
 
-      <p class="font-weight-light title text-left home-hero-tagline">or login with:</p>
+      <p class="font-weight-light title text-left home-hero-tagline">Sign up with mail:</p>
 
       <v-card-text>
         <v-form @submit.prevent="signup">
           <v-text-field
             label="Full Name"
-            prepend-icon="mdi-account-circle"
-            color="#E040FB"
-            v-model="name"
-          />
-          <v-text-field
-            label="Email"
-            prepend-icon="mdi-account-circle"
+            prepend-icon="mdi-account"
             color="#E040FB"
             v-model="email"
           />
+          <v-text-field label="Email" prepend-icon="mdi-mail" color="#E040FB" v-model="email" />
           <v-text-field
             :type="showPassword ? 'text' : 'password'"
             label="Enter Password"
