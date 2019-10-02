@@ -30,10 +30,18 @@
           <v-text-field
             label="Full Name"
             prepend-icon="mdi-account"
+            :counter="10"
+            :rules="nameRules"
+            color="#E040FB"
+            v-model="name"
+          />
+          <v-text-field
+            label="E-mail"
+            prepend-icon="mdi-mail"
             color="#E040FB"
             v-model="email"
+            :rules="emailRules"
           />
-          <v-text-field label="Email" prepend-icon="mdi-mail" color="#E040FB" v-model="email" />
           <v-text-field
             :type="showPassword ? 'text' : 'password'"
             label="Enter Password"
@@ -64,8 +72,6 @@
           </v-card-actions>
         </v-form>
       </v-card-text>
-
-      
     </div>
   </div>
 </template>
@@ -89,9 +95,16 @@ export default {
       checkbox1: false,
       email: "",
       password: "",
-      repassword: '',
-      name: ''
-
+      repassword: "",
+      name: "",
+      nameRules: [
+        v => !!v || "Name is required",
+        v => (v && v.length >= 5) || "Name must be more tha 4 characters"
+      ],
+      emailRules: [
+        v => !!v || "E-mail is required",
+        v => /.+@.+\..+/.test(v) || "E-mail must be valid"
+      ]
     };
   },
   mounted: function() {
@@ -121,8 +134,7 @@ export default {
         password = this.password,
         repassword = this.repassword;
 
-      if (password != repassword || str(password).length() < 8)
-        return;
+      if (password != repassword || str(password).length() < 8) return;
 
       firebase
         .auth()
