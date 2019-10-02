@@ -15,11 +15,11 @@
       <div class="social-login">
         <button class="btn google-login" id="google-login" @click="googleLogin">
           <img src="~assets/google-icon.svg" alt />
-          Login with Google
+          SignUp with Google
         </button>
         <button class="btn github-login" id="github-login" @click="githubLogin">
           <img src="~assets/github-icon.svg" alt />
-          Login with Github
+          SignUp with Github
         </button>
       </div>
 
@@ -28,7 +28,7 @@
       <v-card-text>
         <v-form @submit.prevent="passwordLogin">
           <v-text-field
-            label="Full Name"
+            label="Full"
             prepend-icon="mdi-account-circle"
             color="#E040FB"
             v-model="email"
@@ -41,7 +41,16 @@
           />
           <v-text-field
             :type="showPassword ? 'text' : 'password'"
-            label="Password"
+            label="Enter Password"
+            prepend-icon="mdi-lock"
+            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+            @click:append="showPassword = !showPassword"
+            color="#E040FB"
+            v-model="password"
+          />
+          <v-text-field
+            :type="showPassword ? 'text' : 'password'"
+            label="Enter Same Password Again"
             prepend-icon="mdi-lock"
             :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showPassword = !showPassword"
@@ -54,13 +63,12 @@
       <v-card-actions>
         <div class="remember-me">
           <v-checkbox v-model="checkbox1" label="Remember me"></v-checkbox>
-          <p class="text-right">forgot password</p>
         </div>
       </v-card-actions>
 
       <v-card-actions>
-        <v-btn class="login-button" to="signin">Login</v-btn>
         <v-btn class="sign-up-button">Sign Up</v-btn>
+        <v-btn class="login-button" to="signin">Login</v-btn>
       </v-card-actions>
     </div>
   </div>
