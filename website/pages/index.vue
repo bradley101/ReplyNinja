@@ -17,7 +17,7 @@
         </p>
 
         <v-btn color="primary" dark large to="/signin">Get Started</v-btn>
-        <v-btn color="primary" dark large to="/dashboard">Dash</v-btn>
+        <v-btn color="primary" dark large to="/dashboard">Dashboard</v-btn>
       </div>
     </div>
 

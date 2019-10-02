@@ -8,7 +8,7 @@
     <div class="login-right">
       <img class="login-rn-logo" src="~assets/reply-ninja-logo.svg" alt="reply ninja logo" />
       <p class="font-weight-light title text-left home-hero-tagline">
-        Welcome, please login to
+        Welcome, please register
         <br />your account
       </p>
 
@@ -27,6 +27,12 @@
 
       <v-card-text>
         <v-form @submit.prevent="passwordLogin">
+          <v-text-field
+            label="Full Name"
+            prepend-icon="mdi-account-circle"
+            color="#E040FB"
+            v-model="email"
+          />
           <v-text-field
             label="Email"
             prepend-icon="mdi-account-circle"
@@ -53,8 +59,8 @@
       </v-card-actions>
 
       <v-card-actions>
-        <v-btn class="login-button" v-on:click="passwordLogin">Login</v-btn>
-        <v-btn class="sign-up-button" to="/signup">Sign Up</v-btn>
+        <v-btn class="login-button" to="signin">Login</v-btn>
+        <v-btn class="sign-up-button">Sign Up</v-btn>
       </v-card-actions>
     </div>
   </div>
