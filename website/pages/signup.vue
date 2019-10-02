@@ -31,7 +31,7 @@
             label="Full Name"
             prepend-icon="mdi-account"
             color="#E040FB"
-            v-model="email"
+            v-model="name"
           />
           <v-text-field label="Email" prepend-icon="mdi-mail" color="#E040FB" v-model="email" />
           <v-text-field
@@ -71,17 +71,22 @@
 </template>
 <script>
 import firebase from "firebase";
+let redirect = (router) => {
+  router.push('dashboard');
+};
 let callAuth = provider => {
   firebase
     .auth()
     .signInWithPopup(provider)
     .then(result => {
       console.log(result);
+      redirect();
     })
     .catch(err => {
       console.log(err);
     });
 };
+
 export default {
   data() {
     return {
@@ -120,15 +125,17 @@ export default {
       let email = this.email,
         password = this.password,
         repassword = this.repassword;
-
-      if (password != repassword || str(password).length() < 8)
+      console.log(typeof password);
+      if (password != repassword || password.length < 8)
         return;
 
+      let that = this;
       firebase
         .auth()
         .createUserWithEmailAndPassword(email, password)
         .then(result => {
           console.log(result);
+          redirect(that.$router);
         })
         .catch(error => {
           console.log(error);
