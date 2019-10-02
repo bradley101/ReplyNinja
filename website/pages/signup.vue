@@ -26,12 +26,12 @@
       <p class="font-weight-light title text-left home-hero-tagline">or login with:</p>
 
       <v-card-text>
-        <v-form @submit.prevent="passwordLogin">
+        <v-form @submit.prevent="signup">
           <v-text-field
-            label="Full"
+            label="Full Name"
             prepend-icon="mdi-account-circle"
             color="#E040FB"
-            v-model="email"
+            v-model="name"
           />
           <v-text-field
             label="Email"
@@ -50,26 +50,27 @@
           />
           <v-text-field
             :type="showPassword ? 'text' : 'password'"
-            label="Enter Same Password Again"
+            label="Re-enter Password"
             prepend-icon="mdi-lock"
             :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showPassword = !showPassword"
             color="#E040FB"
-            v-model="password"
+            v-model="repassword"
           />
+          <v-card-actions>
+            <div class="remember-me">
+              <v-checkbox v-model="checkbox1" label="Remember me"></v-checkbox>
+            </div>
+          </v-card-actions>
+
+          <v-card-actions>
+            <v-btn type="submit" class="sign-up-button">Sign Up</v-btn>
+            <v-btn class="login-button" to="signin">Login</v-btn>
+          </v-card-actions>
         </v-form>
       </v-card-text>
 
-      <v-card-actions>
-        <div class="remember-me">
-          <v-checkbox v-model="checkbox1" label="Remember me"></v-checkbox>
-        </div>
-      </v-card-actions>
-
-      <v-card-actions>
-        <v-btn class="sign-up-button">Sign Up</v-btn>
-        <v-btn class="login-button" to="signin">Login</v-btn>
-      </v-card-actions>
+      
     </div>
   </div>
 </template>
@@ -92,7 +93,10 @@ export default {
       showPassword: false,
       checkbox1: false,
       email: "",
-      password: ""
+      password: "",
+      repassword: '',
+      name: ''
+
     };
   },
   mounted: function() {
@@ -116,14 +120,18 @@ export default {
 
       callAuth(githubProvider);
     },
-    passwordLogin: function() {
+    signup: function() {
       console.log("Ok reached");
       let email = this.email,
-        password = this.password;
+        password = this.password,
+        repassword = this.repassword;
+
+      if (password != repassword || str(password).length() < 8)
+        return;
 
       firebase
         .auth()
-        .signInWithEmailAndPassword(email, password)
+        .createUserWithEmailAndPassword(email, password)
         .then(result => {
           console.log(result);
         })
