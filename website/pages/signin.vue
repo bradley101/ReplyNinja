@@ -13,7 +13,7 @@
       </p>
 
       <div class="social-login">
-        <button class="btn google-login" id="google-login" @click.prevent="googleLogin">
+        <button class="btn google-login" id="google-login" @click.native="googleLogin">
           <img src="~assets/google-icon.svg" alt />
           Login with Google
         </button>
@@ -61,11 +61,11 @@ export default {
       checkbox1: false
     };
   },
-  mounted: function() {
+  mounted: function() {3
     console.log(firebase.SDK_VERSION);
   },
   methods: {
-    googleLogin: (event) => {
+    googleLogin: function(event) {
       let googleProvider = new firebase.auth.GoogleAuthProvider();
       googleProvider.addScope('https://www.googleapis.com/auth/contacts.readonly');
       firebase.auth().useDeviceLanguage();
