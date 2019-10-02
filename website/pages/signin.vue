@@ -13,11 +13,11 @@
       </p>
 
       <div class="social-login">
-        <button class="btn google-login" id="google-login" @click.native="googleLogin">
+        <button class="btn google-login" id="google-login" @click="googleLogin">
           <img src="~assets/google-icon.svg" alt />
           Login with Google
         </button>
-        <button class="btn github-login" id="fb-login">
+        <button class="btn github-login" id="github-login" @click="githubLogin">
           <img src="~assets/github-icon.svg" alt />
           Login with Github
         </button>
@@ -59,6 +59,13 @@
 </template>
 <script>
 import firebase from "firebase";
+let callAuth = (provider) => {
+  firebase.auth().signInWithPopup(provider).then((result) => {
+    console.log(result);
+  }).catch((err) => {
+    console.log(err);
+  })
+};
 export default {
   data() {
     return {
@@ -70,17 +77,22 @@ export default {
     console.log(firebase.SDK_VERSION);
   },
   methods: {
-<<<<<<< HEAD
+
     googleLogin: function(event) {
-=======
-    googleLogin: event => {
->>>>>>> dede5e6755b6eb25f025d8c164ddebefaa5bddf6
+      console.log('Ok reached');
       let googleProvider = new firebase.auth.GoogleAuthProvider();
       googleProvider.addScope(
         "https://www.googleapis.com/auth/contacts.readonly"
       );
       firebase.auth().useDeviceLanguage();
-      console.log(googleProvider);
+      callAuth(googleProvider);
+    },
+    githubLogin: function(event) {
+      console.log('Ok reached');
+      let githubProvider = new firebase.auth.GithubAuthProvider();
+      githubProvider.addScope('read:user user:mail');
+
+      callAuth(githubProvider);
     }
   }
 };
