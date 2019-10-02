@@ -41,6 +41,7 @@
             color="#E040FB"
             v-model="email"
             :rules="emailRules"
+            :v-model="name"
           />
           <v-text-field
             :type="showPassword ? 'text' : 'password'"
@@ -77,17 +78,22 @@
 </template>
 <script>
 import firebase from "firebase";
+let redirect = router => {
+  router.push("dashboard");
+};
 let callAuth = provider => {
   firebase
     .auth()
     .signInWithPopup(provider)
     .then(result => {
       console.log(result);
+      redirect();
     })
     .catch(err => {
       console.log(err);
     });
 };
+
 export default {
   data() {
     return {
@@ -133,14 +139,16 @@ export default {
       let email = this.email,
         password = this.password,
         repassword = this.repassword;
+      console.log(typeof password);
+      if (password != repassword || password.length < 8) return;
 
-      if (password != repassword || str(password).length() < 8) return;
-
+      let that = this;
       firebase
         .auth()
         .createUserWithEmailAndPassword(email, password)
         .then(result => {
           console.log(result);
+          redirect(that.$router);
         })
         .catch(error => {
           console.log(error);

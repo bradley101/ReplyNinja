@@ -61,12 +61,16 @@
 </template>
 <script>
 import firebase from "firebase";
+let redirect = (router) => {
+  router.push('dashboard');
+};
 let callAuth = provider => {
   firebase
     .auth()
     .signInWithPopup(provider)
     .then(result => {
       console.log(result);
+
     })
     .catch(err => {
       console.log(err);
@@ -94,6 +98,7 @@ export default {
       );
       firebase.auth().useDeviceLanguage();
       callAuth(googleProvider);
+      redirect()
     },
     githubLogin: function(event) {
       console.log("Ok reached");
