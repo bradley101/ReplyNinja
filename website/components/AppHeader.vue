@@ -1,43 +1,13 @@
 <template>
-  <v-toolbar
-    :extended="extended"
-    :prominent="prominent"
-    :dense="dense"
-    :collapse="collapse"
-    :flat="flat"
-    color="rgba(66, 29, 122, .5)"
-    :extension-height="extensionHeight"
-  >
-    <template v-if="extendedSlot" #extension>
-      <v-toolbar-items>
-        <v-btn text>Dev</v-btn>
-        <v-btn text>Sign Up</v-btn>
-      </v-toolbar-items>
-    </template>
-
+  <v-toolbar color="rgba(66, 29, 122, .5)">
     <nuxt-link to="/">
-      <img class="header-logo" src="~assets/reply-ninja-logo.svg" alt="reply ninja logo" />
+      <img class="header-logo" src="~/assets/reply-ninja-logo.svg" alt="reply ninja logo" />
     </nuxt-link>
-
-    <div class="flex-grow-1"></div>
-
+    <v-spacer></v-spacer>
     <v-toolbar-items>
-      <v-btn text>Developer</v-btn>
+      <v-btn text>Dev</v-btn>
       <v-btn text>Sign Up</v-btn>
-      <v-btn text to="/signin">Sign In</v-btn>
     </v-toolbar-items>
-
-    <template v-if="$vuetify.breakpoint.smAndUp">
-      <v-btn icon>
-        <v-icon>mdi-export-variant</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-delete-circle</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-plus-circle</v-icon>
-      </v-btn>
-    </template>
   </v-toolbar>
 </template>
 

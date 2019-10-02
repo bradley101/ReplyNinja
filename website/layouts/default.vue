@@ -1,11 +1,9 @@
-@@ -0,0 +1,117 @@
 <template>
-  <v-app dark>
-    <app-header class="app-header" />
-    <nuxt />
-    <!-- <v-footer app>
-      <span>&copy; 2019</span>
-    </v-footer>-->
+  <v-app dark color="bg-white">
+    <app-header class="z-2" />
+    <v-content>
+      <nuxt />
+    </v-content>
   </v-app>
 </template>
 
@@ -19,16 +17,7 @@ export default {
 </script>
 
 <style>
-.app-header {
+.z-2 {
   z-index: 2;
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.5s;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
 }
 </style>

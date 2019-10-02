@@ -48,6 +48,12 @@ module.exports = {
   buildModules: [
     '@nuxtjs/vuetify',
   ],
+
+  // transition for all pages
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
+  },
   /*
   
   ** Nuxt.js modules
