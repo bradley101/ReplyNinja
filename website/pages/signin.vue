@@ -26,11 +26,12 @@
       <p class="font-weight-light title text-left home-hero-tagline">or login with:</p>
 
       <v-card-text>
-        <v-form>
+        <v-form @submit.prevent="passwordLogin">
           <v-text-field
-            label="Email or username"
+            label="Email"
             prepend-icon="mdi-account-circle"
             color="#E040FB"
+            v-model="email"
           />
           <v-text-field
             :type="showPassword ? 'text' : 'password'"
@@ -39,6 +40,7 @@
             :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showPassword = !showPassword"
             color="#E040FB"
+            v-model="password"
           />
         </v-form>
       </v-card-text>
@@ -51,7 +53,7 @@
       </v-card-actions>
 
       <v-card-actions>
-        <v-btn class="login-button">Login</v-btn>
+        <v-btn class="login-button" v-on:click="passwordLogin">Login</v-btn>
         <v-btn class="sign-up-button">Sign Up</v-btn>
       </v-card-actions>
     </div>
@@ -70,7 +72,9 @@ export default {
   data() {
     return {
       showPassword: false,
-      checkbox1: false
+      checkbox1: false,
+      email: '',
+      password: ''
     };
   },
   mounted: function() {3
@@ -93,6 +97,17 @@ export default {
       githubProvider.addScope('read:user user:mail');
 
       callAuth(githubProvider);
+    },
+    passwordLogin: function() {
+      console.log('Ok reached');
+      let email = this.email, password = this.password;
+      
+      firebase.auth().signInWithEmailAndPassword(email, password).then((result) => {
+        console.log(result);
+      }).catch((error) => {
+        console.log(error);
+      })
+      
     }
   }
 };
