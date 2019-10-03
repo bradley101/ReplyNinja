@@ -5,11 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ReplyNinja UI</title>
+    <link rel="stylesheet" href="child.css">
 </head>
 
 <body>
-
+    <div class="ui-container">
+        <form class="ui-comment-section" @submit.prevent="onSubmit">
+            <div class="comment-container">
+                <div class="contain">
+                    <input class="post-comment-name pl" placeholder="Your  name" />
+                    <textarea class="post-comment-text" placeholder="Write your comment here."></textarea>
+                    <button class="post-comment-button" type="submit" value="Submit">Post Comment</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
+<script src="script.js"></script>
 
 </html>
