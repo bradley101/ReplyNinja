@@ -63,13 +63,18 @@
           />
           <v-card-actions>
             <div class="remember-me">
-              <v-checkbox v-model="checkbox1" label="Remember me"></v-checkbox>
+              <v-checkbox
+                v-model="checkbox1"
+                label="I agree to terms and condtitions."
+                :rules="[v => !!v || 'You must agree to continue!']"
+                required
+              ></v-checkbox>
             </div>
           </v-card-actions>
 
           <v-card-actions>
-            <v-btn type="submit" class="sign-up-button">Sign Up</v-btn>
-            <v-btn class="login-button" to="signin">Login</v-btn>
+            <v-btn type="submit" class="sign-button-1">Sign Up</v-btn>
+            <v-btn class="sign-button-2" to="signin">Login</v-btn>
           </v-card-actions>
         </v-form>
       </v-card-text>
@@ -153,6 +158,17 @@ export default {
         .catch(error => {
           console.log(error);
         });
+    },
+    validate() {
+      if (this.$refs.form.validate()) {
+        this.snackbar = true;
+      }
+    },
+    reset() {
+      this.$refs.form.reset();
+    },
+    resetValidation() {
+      this.$refs.form.resetValidation();
     }
   }
 };

@@ -53,16 +53,16 @@
       </v-card-actions>
 
       <v-card-actions>
-        <v-btn class="login-button" v-on:click="passwordLogin">Login</v-btn>
-        <v-btn class="sign-up-button" to="/signup">Sign Up</v-btn>
+        <v-btn class="sign-button-1" v-on:click="passwordLogin">Login</v-btn>
+        <v-btn class="sign-button-2" to="/signup">Sign Up</v-btn>
       </v-card-actions>
     </div>
   </div>
 </template>
 <script>
 import firebase from "firebase";
-let redirect = (router) => {
-  router.push('dashboard');
+let redirect = router => {
+  router.push("dashboard");
 };
 let callAuth = provider => {
   firebase
@@ -70,7 +70,6 @@ let callAuth = provider => {
     .signInWithPopup(provider)
     .then(result => {
       console.log(result);
-
     })
     .catch(err => {
       console.log(err);
@@ -98,7 +97,7 @@ export default {
       );
       firebase.auth().useDeviceLanguage();
       callAuth(googleProvider);
-      redirect()
+      redirect();
     },
     githubLogin: function(event) {
       console.log("Ok reached");
