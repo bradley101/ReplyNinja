@@ -71,7 +71,6 @@
               ></v-checkbox>
             </div>
           </v-card-actions>
-
           <v-card-actions>
             <v-btn type="submit" class="sign-button-1">Sign Up</v-btn>
             <v-btn class="sign-button-2" to="signin">Login</v-btn>
