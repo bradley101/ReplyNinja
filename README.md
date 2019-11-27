@@ -1,4 +1,4 @@
-# Awesome Comment System For Static as well s Dynamic Website
+# Awesome Comment System For Static and Dynamic Website
 
 ## Features
 
