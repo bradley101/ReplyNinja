@@ -17,7 +17,7 @@
     "firebase": "^7.0.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.0",
-    "vuetify": "^2.0.19"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
